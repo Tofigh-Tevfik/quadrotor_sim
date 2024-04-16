@@ -1,0 +1,141 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="quadrotor">
+
+<xacro:include filename="$(find quadrotor_sim)/urdf/quadrotor.gazebo" /> 
+
+<!-- dummy_link -->
+<link name="quadrotor" />
+
+<!-- dummy_joint -->
+<joint name="quadrotor_joint" type="fixed">
+    <parent link="quadrotor" />
+    <child link="base_link" />
+</joint>
+
+<!-- base_link -->
+<link name="base_link">
+    <visual>
+        <origin rpy="0.0 0.0 ${-pi/2}" />
+        <geometry>
+            <mesh filename="package://quadrotor_sim/meshes/quadrotor.dae" scale="0.001 0.001 0.001"/>
+        </geometry>
+    </visual>
+    <collision>
+        <origin xyz="0.0 0.0 0.013" rpy="0.0 0.0 ${-pi/2}" />
+        <geometry>
+            <!-- <mesh filename="package://quadrotor_sim/meshes/quadrotor.dae" scale="0.001 0.001 0.001"/> -->
+            <box size="0.31781 0.31781 0.09535" />
+        </geometry>
+    </collision>
+    <inertial>
+        <mass value="1.25" />
+        <inertia ixx="0.0232" ixy="0.0" ixz="0.0" iyy="0.0232" iyz="0.0" izz="0.0468" />
+    </inertial>
+</link>
+
+<!-- propeller_1 -->
+<joint name="propeller_1" type="continuous">
+    <parent link="base_link" />
+    <child link="prop1" />
+    <origin xyz="0.15891 0.15891 0.0475" />
+    <axis xyz="0 0 1" />
+</joint>
+
+<!-- prop1 -->
+<link name="prop1">
+    <visual>
+        <geometry>
+            <mesh filename="package://quadrotor_sim/meshes/propeller_ccw.dae" scale="0.001 0.001 0.001"/>
+        </geometry>
+    </visual>
+    <collision>
+        <geometry>
+            <mesh filename="package://quadrotor_sim/meshes/propeller_ccw.dae" scale="0.001 0.001 0.001"/>
+        </geometry>
+    </collision>
+    <inertial>
+        <mass value="0.05" />
+        <inertia ixx="0.0000001" ixy="0.0" ixz="0.0" iyy="0.0000001" iyz="0.0" izz="0.00001" />
+    </inertial>
+</link>
+
+<!-- propeller_2 -->
+<joint name="propeller_2" type="continuous">
+    <parent link="base_link" />
+    <child link="prop2" />
+    <origin xyz="-0.15891 0.15891 0.0475" />
+    <axis xyz="0 0 1" />
+</joint>
+
+<!-- prop2 -->
+<link name="prop2">
+    <visual>
+        <geometry>
+            <mesh filename="package://quadrotor_sim/meshes/propeller_cw.dae" scale="0.001 0.001 0.001"/>
+        </geometry>
+    </visual>
+    <collision>
+        <geometry>
+            <mesh filename="package://quadrotor_sim/meshes/propeller_cw.dae" scale="0.001 0.001 0.001"/>
+        </geometry>
+    </collision>
+    <inertial>
+        <mass value="0.05" />
+        <inertia ixx="0.0000001" ixy="0.0" ixz="0.0" iyy="0.0000001" iyz="0.0" izz="0.00001" />
+    </inertial>
+</link>
+
+<!-- propeller_3 -->
+<joint name="propeller_3" type="continuous">
+    <parent link="base_link" />
+    <child link="prop3" />
+    <origin xyz="-0.15891 -0.15891 0.0475" />
+    <axis xyz="0 0 1" />
+</joint>
+
+<!-- prop3 -->
+<link name="prop3">
+    <visual>
+        <geometry>
+            <mesh filename="package://quadrotor_sim/meshes/propeller_ccw.dae" scale="0.001 0.001 0.001"/>
+        </geometry>
+    </visual>
+    <collision>
+        <geometry>
+            <mesh filename="package://quadrotor_sim/meshes/propeller_ccw.dae" scale="0.001 0.001 0.001"/>
+        </geometry>
+    </collision>
+    <inertial>
+        <mass value="0.05" />
+        <inertia ixx="0.0000001" ixy="0.0" ixz="0.0" iyy="0.0000001" iyz="0.0" izz="0.00001" />
+    </inertial>
+</link>
+
+<!-- propeller_4 -->
+<joint name="propeller_4" type="continuous">
+    <parent link="base_link" />
+    <child link="prop4" />
+    <origin xyz="0.15891 -0.15891 0.0475" />
+    <axis xyz="0 0 1" />
+</joint>
+
+<!-- prop4 -->
+<link name="prop4">
+    <visual>
+        <geometry>
+            <mesh filename="package://quadrotor_sim/meshes/propeller_cw.dae" scale="0.001 0.001 0.001"/>
+        </geometry>
+    </visual>
+    <collision>
+        <geometry>
+            <mesh filename="package://quadrotor_sim/meshes/propeller_cw.dae" scale="0.001 0.001 0.001"/>
+        </geometry>
+    </collision>
+    <inertial>
+        <mass value="0.05" />
+        <inertia ixx="0.0000001" ixy="0.0" ixz="0.0" iyy="0.0000001" iyz="0.0" izz="0.00001" />
+    </inertial>
+</link>
+
+
+</robot>

@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<robot>
+<gazebo>
+    <plugin name="quadrotor_propulsion_plugin" filename="libquadrotor_propulsion_plugin.so" />
+    <plugin name="trajectory_visualizer_plugin" filename="libtrajectory_visualizer_plugin.so" />
+</gazebo>
+</robot>

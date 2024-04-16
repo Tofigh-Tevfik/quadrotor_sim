@@ -1,0 +1,8 @@
+#TrajectoryVisualizer.srv
+float64[] x
+float64[] y
+float64[] z
+int32 number_of_points
+---
+bool success
+string message

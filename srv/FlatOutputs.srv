@@ -1,0 +1,10 @@
+# FlatOutputs.srv
+float64[3] rT
+float64[3] rTdot
+float64[3] rTddot
+float64[3] adot
+float64 psi_T
+float64 psidot_T
+---
+bool success
+string message

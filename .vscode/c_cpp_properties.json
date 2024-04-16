@@ -1,0 +1,40 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "${default}",
+        "limitSymbolsToIncludedHeaders": false
+      },
+      "includePath": [
+        "/home/tofigh/catkin_ws/devel/include/**",
+        "/opt/ros/noetic/include/**",
+        "/home/tofigh/ws_sensor_combined/install/px4_ros_com/include/**",
+        "/home/tofigh/ws_sensor_combined/install/px4_msgs/include/**",
+        "/home/tofigh/ws_sensor_combined/install/px4/include/**",
+        "/home/tofigh/catkin_ws/src/cart_pole/include/**",
+        "/home/tofigh/catkin_ws/src/cleaner_bot/include/**",
+        "/home/tofigh/catkin_ws/src/cubli/include/**",
+        "/home/tofigh/catkin_ws/src/edrone/include/**",
+        "/home/tofigh/catkin_ws/src/inverted_pendulum/include/**",
+        "/home/tofigh/catkin_ws/src/iris_drone/include/**",
+        "/home/tofigh/catkin_ws/src/Freyja/lqg_controller/include/**",
+        "/home/tofigh/catkin_ws/src/lqr_quadcopter/include/**",
+        "/home/tofigh/catkin_ws/src/morphing_quadcopter/include/**",
+        "/home/tofigh/catkin_ws/src/mpc_drone/include/**",
+        "/home/tofigh/catkin_ws/src/new_cart_pole/include/**",
+        "/home/tofigh/catkin_ws/src/pendulum/include/**",
+        "/home/tofigh/catkin_ws/src/px4_bridge/include/**",
+        "/home/tofigh/catkin_ws/src/quadrotor_sim/include/**",
+        "/home/tofigh/catkin_ws/src/Freyja/state_manager/include/**",
+        "/home/tofigh/catkin_ws/src/vitarana_drone/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS",
+      "intelliSenseMode": "gcc-x64",
+      "compilerPath": "/usr/bin/gcc",
+      "cStandard": "gnu11",
+      "cppStandard": "c++14"
+    }
+  ],
+  "version": 4
+}

@@ -1,0 +1,8 @@
+# QuadrotorInput.srv
+float64 T
+float64 Mx
+float64 My
+float64 Mz
+---
+bool success
+string message

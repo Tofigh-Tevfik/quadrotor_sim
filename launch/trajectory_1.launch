@@ -1,0 +1,3 @@
+<launch>
+    <node pkg="quadrotor_sim" type="trajectory_planner.py" name="trajectory_planner" output="screen" args="1"/>
+</launch>
